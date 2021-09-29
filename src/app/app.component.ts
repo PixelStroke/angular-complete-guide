@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng4-complete-guide';
+  showRecipeList = true;
+  showShoppingList = false;
+
+  onNavigate(pageList: {showRecipeList: boolean, showShoppingList: boolean}) {
+    this.showRecipeList = pageList.showRecipeList;
+    this.showShoppingList = pageList.showShoppingList;
+  }
 }

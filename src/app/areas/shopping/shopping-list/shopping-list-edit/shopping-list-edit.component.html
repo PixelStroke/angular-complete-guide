@@ -1,0 +1,48 @@
+<div class="row">
+  <hr>
+  <h2>Shopping List Edit</h2>
+
+  <form #ingredientForm="ngForm" (ngSubmit)="addIngredient(ingredientForm)">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3 input-group input-group-sm">
+          <span class="input-group-text" id="nameLabel">Name</span>
+          <input
+            [(ngModel)]="name"
+            name="name"
+            type="text"
+            id="name"
+            class="form-control"
+            aria-describedby="nameLabel">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="mb-3 input-group input-group-sm">
+          <span class="input-group-text" id="amountLabel">Amount</span>
+          <input
+            [(ngModel)]="amount"
+            name="amount"
+            type="number"
+            id="amount"
+            class="form-control"
+            aria-describedby="amountLabel">
+        </div>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <button
+        class="btn btn-success"
+        type="submit">Add</button>
+      <button
+        (click)="onIngredientClear()"
+        class="btn btn-primary"
+        type="button">Clear</button>
+      <button
+        (click)="onIngredientRemoved()"
+        class="btn btn-danger"
+        type="button">Delete</button>
+    </div>
+  </form>
+</div>
