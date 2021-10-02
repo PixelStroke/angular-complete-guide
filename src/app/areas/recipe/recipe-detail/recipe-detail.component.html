@@ -1,36 +1,43 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+    <img
+      [src]="recipe.imagePath"
+      alt="{{recipe.name}}"
+      class="img-responsive">
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    <h1>Recipe Name</h1>
+    <h1>{{ recipe.name }}</h1>
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group">
+    <div
+      appDropdown
+      class="btn-group">
       <button type="button"
+        type="button"
         class="btn btn-primary dropdown-toggle">
-        Manage Recipe <span class="caret"></span>
+        {{"manage recipe" | titlecase}} <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
-        <li class="dropdown-item">
-          <a href="#">Add Ingredient to Shopping List</a>
-          <a href="#">Edit Recipe</a>
-          <a href="#">Delete Recipe</a>
-        </li>
-      </ul>
+
+      <div
+        class="dropdown-menu"
+        style="position:absolute;top:38px;left:0px;will-change:transform;">
+        <a href="#" class="dropdown-item">Add Ingredient to Shopping List</a>
+        <a href="#" class="dropdown-item">Edit Recipe</a>
+        <a href="#" class="dropdown-item">Delete Recipe</a>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    Description
+    {{ recipe.description }}
   </div>
 </div>
 

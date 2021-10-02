@@ -1,6 +1,13 @@
 <div class="row">
-  <!-- <div class="col-xs-10"> -->
+  <div class="col">
+    <app-shopping-list-edit
+      (ingredientAdded)="onIngredientAdded($event)"></app-shopping-list-edit>
     <hr>
+  </div>
+</div>
+
+<div class="row">
+  <!-- <div class="col-xs-10"> -->
     <h2>Shopping List</h2>
 
     <div class="col">
@@ -14,10 +21,4 @@
         </a>
       </ul>
     </div>
-
-  <div class="col">
-    <app-shopping-list-edit
-      (ingredientAdded)="onIngredientAdded($event)"
-      ></app-shopping-list-edit>
-  </div>
 </div>
